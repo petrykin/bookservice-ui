@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: .
+    ports:
+      - "3000:3000"
+  #  depends_on:
+  #    - backend
+
+  #backend:
+  #  image: your-spring-boot-image:latest
+  #  ports:
+      - "8080:8080"
+    # Add any necessary environment variables for your Spring Boot app
+    # environment:
+    #   - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/bookdb
+    #   - SPRING_DATASOURCE_USERNAME=user
+    #   - SPRING_DATASOURCE_PASSWORD=password
+
+  # If your Spring Boot app uses a database, you can add it here
+  # db:
+  #   image: postgres:13
+  #   environment:
+  #     - POSTGRES_DB=bookdb
+  #     - POSTGRES_USER=user
+  #     - POSTGRES_PASSWORD=password
