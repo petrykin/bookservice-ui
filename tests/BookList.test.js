@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { BookProvider } from '../src/context/BookContext';
-import BookList from '../src/components/BookList';
+import {UserBooksView} from "../src/components/UserBooksView";
 
 const mockBooks = [
     { id: 1, title: 'Book 1', author: 'Author 1' },
@@ -17,7 +17,7 @@ test('renders book list', () => {
     render(
         <Router>
             <BookProvider>
-                <BookList />
+                <UserBooksView />
             </BookProvider>
         </Router>
     );
